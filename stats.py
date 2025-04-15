@@ -14,3 +14,8 @@ def count_characters(text):
             character_dict[lowerchar] = 1
 
     return character_dict
+
+def sort_characters(dict):
+    sorted_dict = sorted(dict.items(), key=lambda x: x[1], reverse=True)
+
+    return sorted_dict
