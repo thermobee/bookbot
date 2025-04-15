@@ -1,8 +1,14 @@
+import sys
 from stats import count_words
 from stats import count_characters
 from stats import sort_characters
 
-book_location = "books/frankenstein.txt"
+# Check for a second argument (path to the text)
+if len(sys.argv) < 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+else:
+    book_location = sys.argv[1]
 
 def get_book_text(path):
     with open(path) as f:
